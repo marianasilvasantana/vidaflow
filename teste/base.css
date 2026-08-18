@@ -1,263 +1,380 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  background-color: #cfe8ff;
-  color: #000000;
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  color: #000000;
-  margin-bottom: 10px;
-}
-
-header p {
-  color: #000000;
-  font-size: 1.1rem;
-}
-
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.card {
-  background-color: rgb(255, 255, 255);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15 px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-
-.card-body {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.card-title {
-  font-size: 1.3rem;
-  color: #000000;
-  margin-bottom: 10px;
-}
-
-.card-text {
-  color: #000000;
-  font-size: 0.95rem;
-  margin-bottom: 20px;
-}
-
-.btn-saiba-mais {
-  margin-top: auto;
-  padding: 10px 20px;
-  background-color: #000000 ;
-  color: #000000;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-saiba-mais:hover{
-  transform: translateY(-4px);
-  background-color: #000000;
-  box-shadow: 0 6px 15px rgb(52, 1523,219, 0.4);
-}
-
-.btn-voltar {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0056b3;
-  color: #ffffff;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.2s ease;
-}
-
-.btn-voltar:hover {
-  background-color: #0056b3;
-}
-
-/* chat bot*/
-
-body.chat-layout {
-  display: flex;
-  flex-direction: row ;
-  align-items: stretch ;
-  justify-content: flex-start ;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: #1e1e1e;
-  color: #ffffff;
-  overflow: hidden;
-}
-
-.sidebar {
-  width: 270px;
-  min-width: 260px;
-  height: 100vh;
-  background-color: #121212;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  border-right: 1px solid #2d2d2d;
-}
-
-.sidebar-header h2 {
-  font-size: 1.4rem;
-  color: #ffffff;
-}
-
-.sidebar-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.sidebar-menu a {
-  color: #a0a0a0;
-  text-decoration: none;
-  padding: 10px 12px;
-  border-radius: 8px;
-  transition: background 0.2s, color 0.2s;
-}
-
-.sidebar-menu a:hover,
-.sidebar-menu a.active {
-  background-color: #2a2a2a;
-  color: #ffffff;
-}
-
-.sidebar .btn-voltar {
-  width: 100%;
-  background-color: #2a2a2a;
-  color: #ffffff;
-  border: 1px solid #3d3d3d;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.sidebar .btn-voltar:hover {
-  background-color: #3d3d3d;
-}
-
-.chat-main {
-  flex: 1;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; 
-  background-color: #1e1e1e;
-}
-
-.chat-header {
-  width: 100%;
-  padding: 20px 30px;
-  border-bottom: 1px solid #2d2d2d;
-  text-align: left;
-  margin: 0;
-}
-
-.chat-header h1 {
-  font-size: 1.8rem;
-  color: #ffffff;
-  margin-bottom: 4px;
-}
-
-.chat-header p {
-  color: #888888;
-  font-size: 0.95rem;
-}
-
-.chat-content {
-  flex: 1;
-  padding: 20px 30px;
-  overflow-y: auto;
-}
-
-.chat-footer {
-  width: 100%;
-  padding: 20px 30px;
-  background-color: #1e1e1e;
-  display: flex;
-  justify-content: center;
-}
-
-.chat-footer .input-group {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 800px;
-  background-color: #2a2a2a;
-  border-radius: 30px;
-  padding: 6px 15px;
-  border: 1px solid #3d3d3d;
-}
-
-.chat-footer input[type="text"] {
-  flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  padding: 10px;
-  font-size: 1rem;
-}
-
-.chat-footer input[type="text"]::placeholder {
-  color: #777777;
-}
-
-.chat-footer .btn-enviar {
-  background-color: #ffffff;
-  color: #000000;
-  border: none;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* aba principal*/
+/* ==========================================
+   0. IMPORTAÇÃO DAS FONTES (GOOGLE FONTS)
+   ========================================== */
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;1,800&display=swap');
+   /* ==========================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body {
+    background-color: #cfe8ff;
+    color: #0f172a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* ==========================================
+     2. BARRA DE NAVEGAÇÃO (NAVBAR SUPERIOR)
+     ========================================== */
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    background-color: #ffffff;
+    border-bottom: 2px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 10;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .logo-container .logo-texto {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 2.4rem !important;
+    font-weight: 800 !important;
+    color: #0f4c81 !important;
+    letter-spacing: -1px !important;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .nav-links a {
+    color: #334155;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #2563eb;
+  }
+  
+  /* ==========================================
+     3. HERO BANNER COM ONDAS VISÍVEIS (INDEX)
+     ========================================== */
+  .hero-full {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    color: #ffffff;
+    overflow: hidden;
+    background-color: #1e3a8a;
+  }
+  
+  /* Camada da Onda Animada */
+  .gradient-bg {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, #60a5fa, #2563eb 50%, #1e3a8a 80%);
+    border-radius: 40%;
+    animation: girarOnda 12s linear infinite;
+    z-index: 1;
+    opacity: 0.85;
+  }
+  
+  /* Segunda camada de onda para dar profundidade e contraste */
+  .hero-full::after {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: -40%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 70% 70%, #93c5fd, #3b82f6 60%, transparent);
+    border-radius: 45%;
+    animation: girarOnda 18s linear infinite reverse;
+    z-index: 1;
+    opacity: 0.5;
+  }
+  
+  /* Animação de Rotação */
+  @keyframes girarOnda {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+  }
+  
+  .hero-content h1 {
+    font-size: 5rem; /* Aumenta bastante o tamanho da palavra no centro */
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif; /* Aplica a nova fonte apenas no título principal */
+    letter-spacing: -2px; /* Deixa o visual mais moderno e compacto */
+    margin-bottom: 20px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .hero-content p {
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #f0f9ff;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn-hero {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #ffffff;
+    color: #1e3a8a;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .btn-hero:hover {
+    transform: translateY(-3px) scale(1.03);
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  }
+  
+  /* ==========================================
+     4. BANNER PADRÃO (PÁGINAS SECUNDÁRIAS)
+     ========================================== */
+  .hero-banner {
+    width: 100%;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-banner h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+  }
+  
+  .hero-banner p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #dbeafe;
+    margin: 0;
+  }
+  
+  /* ==========================================
+     5. VITRINE DE CARDS DA PÁGINA INICIAL
+     ========================================== */
+  .container-home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    width: 100%;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 50px;
+    letter-spacing: -0.5px;
+  }
+  
+  .card-container-home {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+  }
+  
+  .card-home {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-home:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-image-box {
+    height: 180px;
+    background-color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .card-icon {
+    font-size: 4rem;
+  }
+  
+  .card-home-body {
+    padding: 30px 25px;
+    text-align: center;
+  }
+  
+  .card-home-body h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+  }
+  
+  .card-home-body p {
+    color: #64748b;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  
+  /* ==========================================
+     6. CARDS TRADICIONAIS (HOSPITAIS / DOAÇÕES)
+     ========================================== */
+  .container, .card-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 50px 20px;
+    margin: 0 auto;
+  }
+  
+  .lista-hospitais h2 {
+    text-align: center;
+    color: #0f4c81;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+  }
+  
+  .hospitais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    width: 100%;
+  }
+  
+  .card-hospital {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #bde0fe;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-hospital:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-header {
+    background-color: #e9f2ff;
+    padding: 22px 20px;
+    border-bottom: 2px solid #2563eb;
+  }
+  
+  .card-header h3 {
+    margin: 0;
+    color: #2563eb;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.3px;
+  }
+  
+  .card-body {
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .endereco {
+    color: #333333;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* ==========================================
+     7. BOTÃO VOLTAR
+     ========================================== */
+  .voltar {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .btn-voltar {
+    display: inline-block;
+    color: #2563eb;
+    background-color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 10px 22px;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .btn-voltar:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+  }

@@ -5,19 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hospitais - VidaFlow</title>
   <link rel="stylesheet" href="base.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-  <header>
-    <h1>Doações</h1>
-    <p>Área para Hospitais da VidaFlow.</p>
+  <!-- Menu do Topo -->
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo VidaFlow" class="logo-img">
+      <span class="logo-texto">VidaFlow</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">INÍCIO</a>
+      <a href="doacoes.html">DOAÇÕES</a>
+      <a href="hospitais.html" class="active">HOSPITAIS</a>
+    </nav>
   </header>
 
-  <main>
-    <p>Aqui ficará a página de Hospitais.</p>
+  <!-- Banner Azul do Topo (Com Título e Subtítulo) -->
+  <section class="hero-banner">
+    <h1>Hospitais Parceiros</h1>
+    <p>Confira as unidades de saúde atendidas pelo projeto VidaFlow.</p>
+  </section>
 
-    <a href="index.html">Voltar para a página inicial</a>
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <section class="lista-hospitais">
+      <h2>Lista de Unidades</h2>
+
+      <div class="hospitais-grid">
+        <!-- Card 1 -->
+        <div class="card-hospital">
+          <div class="card-header">
+            <h3>Hospital Maringá</h3>
+          </div>
+          <div class="card-body">
+            <p class="endereco">📍 Av. Cidade de Leiria, 351 - Zona 01</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-hospital">
+          <div class="card-header">
+            <h3>Hospital Paraná</h3>
+          </div>
+          <div class="card-body">
+            <p class="endereco">📍 Av. Dr. Luiz Teixeira Mendes, 1929 - Zona 05</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="voltar">
+      <a href="index.html" class="btn-voltar">← Voltar para a página inicial</a>
+    </div>
   </main>
 
 </body>

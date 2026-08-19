@@ -3,56 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hospital Universitário (HUM) - Detalhes</title>
-  <link rel="stylesheet" href="base.css">
+  <title>Hospital Universitário (HUM) - VidaFlow</title>
+  <link rel="stylesheet" href="../base.css">
+  <script src="../script.js" defer></script>
+  <style>
+    body { background-color: #0f172a; background-image: radial-gradient(at 20% 20%, #2563eb 0px, transparent 50%), radial-gradient(at 80% 80%, #3b82f6 0px, transparent 50%); background-attachment: fixed; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; margin: 0; }
+    .detalhes-container { max-width: 800px; margin: 40px auto; padding: 30px; background: rgba(255, 255, 255, 0.95); color: #1e293b; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+    .detalhes-container h1 { color: #1d4ed8; margin-top: 0; font-size: 2.2rem; }
+    .detalhes-section { margin-top: 25px; padding-top: 15px; border-top: 1px solid #e2e8f0; }
+    .detalhes-section h2 { color: #2563eb; font-size: 1.3rem; margin-bottom: 10px; }
+    .detalhes-section ul { padding-left: 20px; line-height: 1.8; }
+    .btn-voltar-lista { display: inline-block; margin-top: 25px; padding: 10px 20px; background-color: #2563eb; color: #ffffff; border-radius: 8px; text-decoration: none; font-weight: bold; }
+    .btn-voltar-lista:hover { background-color: #1d4ed8; }
+  </style>
 </head>
 <body>
-
   <header class="navbar">
-    <div class="logo-container">
-      <img src="logo.png" alt="Logo VidaFlow" class="logo-img">
-      <span class="logo-texto">VidaFlow</span>
-    </div>
+    <div class="logo-container"><img src="../logo.png" alt="Logo" class="logo-img"><span class="logo-texto">VidaFlow</span></div>
     <nav class="nav-links">
-      <a href="index.html">INÍCIO</a>
-      <a href="doacoes.html">DOAÇÕES</a>
-      <a href="hospitais.html" class="active">HOSPITAIS</a>
+      <a href="../index.html">INÍCIO</a>
+      <a href="../doacoes.html">DOAÇÕES</a>
+      <a href="../hospitais.html" class="active">HOSPITAIS</a>
+      <a href="../chatbot.html">CHATBOT</a>
     </nav>
   </header>
-
-  <section class="hero-banner">
-    <h1>Hospital Universitário Regional de Maringá</h1>
+  <main class="detalhes-container">
+    <h1>Hospital Universitário (HUM)</h1>
     <p>Informações institucionais e serviços oferecidos.</p>
-  </section>
-
-  <main class="container">
-    <div class="detalhes-hospital">
-      <section class="info-bloco">
-        <h2>📍 Localização</h2>
-        <p>Av. Mandacaru, 1590 - Vila Cândida, Maringá - PR</p>
-        <p><strong>Telefone:</strong> (44) 3011-9100</p>
-      </section>
-
-      <section class="info-bloco">
-        <h2>🏛️ Gestão / Propriedade</h2>
-        <p>Hospital público de ensino vinculado à Universidade Estadual de Maringá (UEM), focado no atendimento via SUS.</p>
-      </section>
-
-      <section class="info-bloco">
-        <h2>🩺 Serviços Prestados</h2>
-        <ul>
-          <li>Atendimento Público (SUS) de Alta Complexidade</li>
-          <li>Centro de Referência em Traumatologia</li>
-          <li>Banco de Leite Humano</li>
-          <li>Pesquisa e Formação Médica</li>
-        </ul>
-      </section>
+    <div class="detalhes-section">
+      <h2>📍 Localização</h2>
+      <p><strong>Endereço:</strong> Av. Mandacaru, 1590 - Vila Cândida, Maringá - PR</p>
+      <p><strong>Telefone:</strong> (44) 3011-9100</p>
     </div>
-
-    <div class="voltar">
-      <a href="hospitais.html" class="btn-voltar">← Voltar para a lista de hospitais</a>
+    <div class="detalhes-section">
+      <h2>🏛️ Gestão / Propriedade</h2>
+      <p>Hospital público de grande porte voltado ao atendimento integrado pelo SUS e ensino acadêmico.</p>
     </div>
+    <div class="detalhes-section">
+      <h2>🩺 Serviços Prestados</h2>
+      <ul>
+        <li>Atendimento de Urgência e Emergência</li>
+        <li>Especialidades Médicas Diversas</li>
+        <li>Unidade de Queimados e Internação Pública</li>
+      </ul>
+    </div>
+    <a href="../hospitais.html" class="btn-voltar-lista">← Voltar para a lista de hospitais</a>
   </main>
-
 </body>
 </html>

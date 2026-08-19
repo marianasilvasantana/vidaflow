@@ -8,17 +8,10 @@
   <script src="script.js" defer></script>
 
   <style>
-    /* Animação das Ondas/Esferas no Fundo */
     @keyframes flutuarOndas {
-      0% {
-        background-position: 0% 0%, 100% 100%, 50% 0%;
-      }
-      50% {
-        background-position: 100% 50%, 0% 50%, 50% 100%;
-      }
-      100% {
-        background-position: 0% 0%, 100% 100%, 50% 0%;
-      }
+      0% { background-position: 0% 0%, 100% 100%, 50% 0%; }
+      50% { background-position: 100% 50%, 0% 50%, 50% 100%; }
+      100% { background-position: 0% 0%, 100% 100%, 50% 0%; }
     }
 
     body {
@@ -36,7 +29,6 @@
       font-family: system-ui, -apple-system, sans-serif;
     }
 
-    /* Banner "Hospitais Parceiros" com Borda Branca */
     .hero-banner {
       background-color: rgba(37, 99, 235, 0.4);
       backdrop-filter: blur(8px);
@@ -56,7 +48,6 @@
       font-size: 1.1rem;
     }
 
-    /* Título "Lista de Unidades" em Branco */
     .lista-hospitais h2 {
       color: #ffffff !important;
       text-align: center;
@@ -65,7 +56,6 @@
       margin-bottom: 25px;
     }
 
-    /* Estilo dos Cards (Fundo Claro com Textos Azuis) */
     .card-hospital {
       background-color: #ffffff;
       border-radius: 12px;
@@ -120,21 +110,14 @@
     }
 
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Menu do Topo -->
   <header class="navbar">
     <div class="logo-container">
       <img src="logo.png" alt="Logo VidaFlow" class="logo-img">
@@ -145,23 +128,22 @@
       <a href="index.html">INÍCIO</a>
       <a href="doacoes.html">DOAÇÕES</a>
       <a href="hospitais.html" class="active">HOSPITAIS</a>
+      <a href="chatbot.html">CHATBOT</a>
     </nav>
   </header>
 
-  <!-- Banner do Topo -->
   <section class="hero-banner">
     <h1>Hospitais Parceiros</h1>
     <p>Confira as unidades de saúde atendidas pelo projeto VidaFlow.</p>
   </section>
 
-  <!-- Conteúdo Principal -->
   <main class="container">
     <section class="lista-hospitais">
       <h2>Lista de Unidades</h2>
 
       <div class="hospitais-grid">
         <!-- Card 1 -->
-        <a href="hospital-maringa.html" class="card-hospital">
+        <a href="hospitais/hospital-maringa.html" class="card-hospital">
           <div class="card-header">
             <h3>Hospital Maringá</h3>
           </div>
@@ -173,7 +155,7 @@
         </a>
 
         <!-- Card 2 -->
-        <a href="hospital-parana.html" class="card-hospital">
+        <a href="hospitais/hospital-parana.html" class="card-hospital">
           <div class="card-header">
             <h3>Hospital Paraná</h3>
           </div>
@@ -185,7 +167,7 @@
         </a>
 
         <!-- Card 3 -->
-        <a href="hospital-universitario.html" class="card-hospital">
+        <a href="hospitais/hospital-universitario.html" class="card-hospital">
           <div class="card-header">
             <h3>Hospital Universitário (HUM)</h3>
           </div>
@@ -197,7 +179,7 @@
         </a>
 
         <!-- Card 4 -->
-        <a href="hospital-santa-casa.html" class="card-hospital">
+        <a href="hospitais/hospital-santa-casa.html" class="card-hospital">
           <div class="card-header">
             <h3>Santa Casa de Maringá</h3>
           </div>
@@ -209,7 +191,7 @@
         </a>
 
         <!-- Card 5 -->
-        <a href="hospital-metropolitano.html" class="card-hospital">
+        <a href="hospitais/hospital-metropolitano.html" class="card-hospital">
           <div class="card-header">
             <h3>Hospital Metropolitano</h3>
           </div>
@@ -221,7 +203,7 @@
         </a>
 
         <!-- Card 6 -->
-        <a href="hospital-bom-samaritano.html" class="card-hospital">
+        <a href="hospitais/hospital-bom-samaritano.html" class="card-hospital">
           <div class="card-header">
             <h3>Hospital Bom Samaritano</h3>
           </div>
@@ -240,4 +222,4 @@
   </main>
 
 </body>
-</html>h
+</html>

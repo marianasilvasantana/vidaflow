@@ -6,6 +6,130 @@
   <title>Hospitais - VidaFlow</title>
   <link rel="stylesheet" href="base.css">
   <script src="script.js" defer></script>
+
+  <style>
+    /* Animação das Ondas/Esferas no Fundo */
+    @keyframes flutuarOndas {
+      0% {
+        background-position: 0% 0%, 100% 100%, 50% 0%;
+      }
+      50% {
+        background-position: 100% 50%, 0% 50%, 50% 100%;
+      }
+      100% {
+        background-position: 0% 0%, 100% 100%, 50% 0%;
+      }
+    }
+
+    body {
+      background-color: #0f172a;
+      background-image: 
+        radial-gradient(at 20% 20%, #2563eb 0px, transparent 50%),
+        radial-gradient(at 80% 80%, #3b82f6 0px, transparent 50%),
+        radial-gradient(at 50% 50%, #1d4ed8 0px, transparent 60%),
+        radial-gradient(at 0% 100%, #60a5fa 0px, transparent 40%);
+      background-size: 180% 180%;
+      animation: flutuarOndas 10s ease-in-out infinite;
+      background-attachment: fixed;
+      color: #ffffff;
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    /* Banner "Hospitais Parceiros" com Borda Branca */
+    .hero-banner {
+      background-color: rgba(37, 99, 235, 0.4);
+      backdrop-filter: blur(8px);
+      border-bottom: 2px solid #ffffff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero-banner h1 {
+      color: #ffffff;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-banner p {
+      color: #e0f2fe;
+      font-size: 1.1rem;
+    }
+
+    /* Título "Lista de Unidades" em Branco */
+    .lista-hospitais h2 {
+      color: #ffffff !important;
+      text-align: center;
+      font-size: 1.8rem;
+      margin-top: 30px;
+      margin-bottom: 25px;
+    }
+
+    /* Estilo dos Cards (Fundo Claro com Textos Azuis) */
+    .card-hospital {
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.5s ease-out forwards;
+      text-decoration: none;
+      color: #334155;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .card-header {
+      background-color: #eff6ff;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #dbeafe;
+    }
+
+    .card-header h3 {
+      color: #1d4ed8;
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .card-body {
+      padding: 20px;
+      text-align: center;
+      color: #334155;
+    }
+
+    .card-body p {
+      margin: 8px 0;
+      color: #475569;
+    }
+
+    .saiba-mais {
+      color: #2563eb;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .card-hospital:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2);
+    }
+
+    .card-hospital:hover .saiba-mais {
+      transform: translateX(6px);
+      color: #1d4ed8;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -24,7 +148,7 @@
     </nav>
   </header>
 
-  <!-- Banner Azul do Topo (Com Título e Subtítulo) -->
+  <!-- Banner do Topo -->
   <section class="hero-banner">
     <h1>Hospitais Parceiros</h1>
     <p>Confira as unidades de saúde atendidas pelo projeto VidaFlow.</p>
@@ -37,31 +161,83 @@
 
       <div class="hospitais-grid">
         <!-- Card 1 -->
-        <div class="card-hospital">
+        <a href="hospital-maringa.html" class="card-hospital">
           <div class="card-header">
             <h3>Hospital Maringá</h3>
           </div>
           <div class="card-body">
             <p class="endereco">📍 Av. Cidade de Leiria, 351 - Zona 01</p>
+            <p class="telefone">📞 (44) 3218-4000</p>
+            <span class="saiba-mais">Ver detalhes →</span>
           </div>
-        </div>
+        </a>
 
         <!-- Card 2 -->
-        <div class="card-hospital">
+        <a href="hospital-parana.html" class="card-hospital">
           <div class="card-header">
             <h3>Hospital Paraná</h3>
           </div>
           <div class="card-body">
             <p class="endereco">📍 Av. Dr. Luiz Teixeira Mendes, 1929 - Zona 05</p>
+            <p class="telefone">📞 (44) 3218-2200</p>
+            <span class="saiba-mais">Ver detalhes →</span>
           </div>
-        </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="hospital-universitario.html" class="card-hospital">
+          <div class="card-header">
+            <h3>Hospital Universitário (HUM)</h3>
+          </div>
+          <div class="card-body">
+            <p class="endereco">📍 Av. Mandacaru, 1590 - Vila Cândida</p>
+            <p class="telefone">📞 (44) 3011-9100</p>
+            <span class="saiba-mais">Ver detalhes →</span>
+          </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="hospital-santa-casa.html" class="card-hospital">
+          <div class="card-header">
+            <h3>Santa Casa de Maringá</h3>
+          </div>
+          <div class="card-body">
+            <p class="endereco">📍 R. José Búscolo, 255 - Vila Operária</p>
+            <p class="telefone">📞 (44) 3027-5633</p>
+            <span class="saiba-mais">Ver detalhes →</span>
+          </div>
+        </a>
+
+        <!-- Card 5 -->
+        <a href="hospital-metropolitano.html" class="card-hospital">
+          <div class="card-header">
+            <h3>Hospital Metropolitano</h3>
+          </div>
+          <div class="card-body">
+            <p class="endereco">📍 R. Mário de Andrade, 700 - Sarandi</p>
+            <p class="telefone">📞 (44) 3221-1200</p>
+            <span class="saiba-mais">Ver detalhes →</span>
+          </div>
+        </a>
+
+        <!-- Card 6 -->
+        <a href="hospital-bom-samaritano.html" class="card-hospital">
+          <div class="card-header">
+            <h3>Hospital Bom Samaritano</h3>
+          </div>
+          <div class="card-body">
+            <p class="endereco">📍 Av. Prudente de Morais, 833 - Zona 07</p>
+            <p class="telefone">📞 (44) 3261-2000</p>
+            <span class="saiba-mais">Ver detalhes →</span>
+          </div>
+        </a>
       </div>
     </section>
 
-    <div class="voltar">
+    <div class="voltar" style="text-align: center; margin-top: 30px;">
       <a href="index.html" class="btn-voltar">← Voltar para a página inicial</a>
     </div>
   </main>
 
 </body>
-</html>
+</html>h

@@ -1,10 +1,10 @@
 /* ==========================================
-   0. IMPORTAÇÃO DAS FONTES (GOOGLE FONTS)
+    IMPORTAÇÃO DAS FONTES (GOOGLE FONTS)
    ========================================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;1,800&display=swap');
 
 /* ==========================================
-   1. RESET E CONFIGURAÇÕES GERAIS
+   RESET E CONFIGURAÇÕES GERAIS
    ========================================== */
 * {
   margin: 0;
@@ -29,7 +29,7 @@ a {
 }
 
 /* ==========================================
-   2. BARRA DE NAVEGAÇÃO (NAVBAR SUPERIOR)
+   BARRA DE NAVEGAÇÃO (NAVBAR SUPERIOR)
    ========================================== */
 .navbar {
   width: 100%;
@@ -57,11 +57,11 @@ a {
 }
 
 .logo-container .logo-texto {
-  font-family: 'Poppins', sans-serif !important;
-  font-size: 2.4rem !important;
-  font-weight: 800 !important;
-  color: #0f4c81 !important;
-  letter-spacing: -1px !important;
+  font-family: 'Poppins', sans-serif ;
+  font-size: 2.4rem ;
+  font-weight: 800 ;
+  color: #0f4c81 ;
+  letter-spacing: -1px ;
 }
 
 .nav-links {
@@ -84,7 +84,7 @@ a {
 }
 
 /* ==========================================
-   3. HERO BANNER COM ONDAS VISÍVEIS (INDEX)
+   HERO BANNER COM ONDAS VISÍVEIS (INDEX)
    ========================================== */
 .hero-full {
   position: relative;
@@ -183,7 +183,7 @@ a {
 }
 
 /* ==========================================
-   4. BANNER PADRÃO (PÁGINAS SECUNDÁRIAS)
+    BANNER PADRÃO (PÁGINAS SECUNDÁRIAS)
    ========================================== */
 .hero-banner {
   width: 100%;
@@ -210,7 +210,7 @@ a {
 }
 
 /* ==========================================
-   5. VITRINE DE CARDS DA PÁGINA INICIAL
+   VITRINE DE CARDS DA PÁGINA INICIAL
    ========================================== */
 .container-home {
   max-width: 1200px;
@@ -283,7 +283,7 @@ a {
 }
 
 /* ==========================================
-   6. CARDS TRADICIONAIS (HOSPITAIS / DOAÇÕES)
+   CARDS TRADICIONAIS (HOSPITAIS / DOAÇÕES)
    ========================================== */
 .container, .card-container {
   width: 100%;
@@ -355,7 +355,7 @@ a {
 }
 
 /* ==========================================
-   7. BOTÃO VOLTAR
+    BOTÃO VOLTAR
    ========================================== */
 .voltar {
   text-align: center;
@@ -381,7 +381,7 @@ a {
 }
 
 /* ==========================================
-   8. CHATBOT (PÁGINA DO CHAT)
+   CHATBOT (PÁGINA DO CHAT)
    ========================================== */
 body.chat-layout {
   display: flex;

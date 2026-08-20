@@ -744,3 +744,22 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
+
+   /* ==========================================
+      botão doe
+      ========================================== */
+
+      .btn-doe {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: #1e3a8a;
+        color: white;
+        text-decoration:none;
+        border-radius: 10px;
+        font-weight: 1000;
+        cursor: pointer;
+    }
+    
+    .btn-doe:hover {
+        background-color: #1e3a8a;
+    }

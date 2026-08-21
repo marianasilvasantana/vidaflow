@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Metropolitano - VidaFlow</title>
+  <link rel="stylesheet" href="../base.css">
+  <script src="../script.js" defer></script>
+  <style>
+    body { background-color: #0f172a; background-image: radial-gradient(at 20% 20%, #2563eb 0px, transparent 50%), radial-gradient(at 80% 80%, #3b82f6 0px, transparent 50%); background-attachment: fixed; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; margin: 0; }
+    .detalhes-container { max-width: 800px; margin: 40px auto; padding: 30px; background: rgba(255, 255, 255, 0.95); color: #1e293b; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+    .detalhes-container h1 { color: #1d4ed8; margin-top: 0; font-size: 2.2rem; }
+    .detalhes-section { margin-top: 25px; padding-top: 15px; border-top: 1px solid #e2e8f0; }
+    .detalhes-section h2 { color: #2563eb; font-size: 1.3rem; margin-bottom: 10px; }
+    .detalhes-section ul { padding-left: 20px; line-height: 1.8; }
+    .btn-voltar-lista { display: inline-block; margin-top: 25px; padding: 10px 20px; background-color: #2563eb; color: #ffffff; border-radius: 8px; text-decoration: none; font-weight: bold; }
+    .btn-voltar-lista:hover { background-color: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo-container"><img src="../logo.png" alt="Logo" class="logo-img"><span class="logo-texto">VidaFlow</span></div>
+    <nav class="nav-links">
+      <a href="../index.html">INÍCIO</a>
+      <a href="../doacoes.html">DOAÇÕES</a>
+      <a href="../hospitais.html" class="active">HOSPITAIS</a>
+      <a href="../chatbot.html">CHATBOT</a>
+    </nav>
+  </header>
+  <main class="detalhes-container">
+    <h1>Hospital Metropolitano</h1>
+    <p>Informações institucionais e serviços oferecidos.</p>
+    <div class="detalhes-section">
+      <h2>📍 Localização</h2>
+      <p><strong>Endereço:</strong> R. Mário de Andrade, 700 - Sarandi - PR</p>
+      <p><strong>Telefone:</strong> (44) 3221-1200</p>
+    </div>
+    <div class="detalhes-section">
+      <h2>🏛️ Gestão / Propriedade</h2>
+      <p>Referência em atendimento de traumas e urgências na região metropolitana.</p>
+    </div>
+    <div class="detalhes-section">
+      <h2>🩺 Serviços Prestados</h2>
+      <ul>
+        <li>Pronto Socorro 24 Horas</li>
+        <li>Cirurgia de Trauma e Ortopedia</li>
+        <li>UTI Especializada</li>
+      </ul>
+    </div>
+    <a href="../hospitais.html" class="btn-voltar-lista">← Voltar para a lista de hospitais</a>
+  </main>
+</body>
+</html>

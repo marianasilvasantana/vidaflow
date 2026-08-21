@@ -1,10 +1,7 @@
-/* ==========================================
-   0. IMPORTAÇÃO DAS FONTES (GOOGLE FONTS)
-   ========================================== */
-   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;1,800&display=swap');
+
 
    /* ==========================================
-      1. RESET E CONFIGURAÇÕES GERAIS
+      1. CONFIGURAÇÕES GERAIS
       ========================================== */
    * {
      margin: 0;
@@ -29,7 +26,7 @@
    }
    
    /* ==========================================
-      2. BARRA DE NAVEGAÇÃO (NAVBAR SUPERIOR)
+      2. BARRA DE NAVEGAÇÃO 
       ========================================== */
    .navbar {
      width: 100%;
@@ -84,7 +81,7 @@
    }
    
    /* ==========================================
-      3. HERO BANNER COM ONDAS VISÍVEIS (INDEX)
+      3.INDEX
       ========================================== */
    .hero-full {
      position: relative;
@@ -183,7 +180,7 @@
    }
    
    /* ==========================================
-      4. BANNER PADRÃO (PÁGINAS SECUNDÁRIAS)
+      4. PÁGINAS SECUNDÁRIAS
       ========================================== */
    .hero-banner {
      width: 100%;
@@ -210,7 +207,7 @@
    }
    
    /* ==========================================
-      5. VITRINE DE CARDS DA PÁGINA INICIAL
+      5.CARDS DA PÁGINA INICIAL
       ========================================== */
    .container-home {
      max-width: 1200px;
@@ -283,7 +280,7 @@
    }
    
    /* ==========================================
-      6. CARDS TRADICIONAIS (HOSPITAIS / DOAÇÕES)
+      6. HOSPITAIS / DOAÇÕES
       ========================================== */
    .container, .card-container {
      width: 100%;
@@ -380,159 +377,9 @@
      color: #ffffff;
    }
    
-   /* ==========================================
-      8. CHATBOT (PÁGINA DO CHAT)
-      ========================================== */
-   body.chat-layout {
-     display: flex;
-     flex-direction: row;
-     align-items: stretch;
-     justify-content: flex-start;
-     margin: 0;
-     padding: 0;
-     height: 100vh;
-     width: 100vw;
-     background-color: #1e1e1e;
-     color: #ffffff;
-     overflow: hidden;
-   }
-   
-   .sidebar {
-     width: 270px;
-     min-width: 260px;
-     height: 100vh;
-     background-color: #121212;
-     padding: 20px;
-     display: flex;
-     flex-direction: column;
-     gap: 50px;
-     border-right: 1px solid #2d2d2d;
-   }
-   
-   .sidebar-header h2 {
-     font-size: 1.4rem;
-     color: #ffffff;
-   }
-   
-   .sidebar-menu {
-     display: flex;
-     flex-direction: column;
-     gap: 10px;
-   }
-   
-   .sidebar-menu a {
-     color: #a0a0a0;
-     text-decoration: none;
-     padding: 10px 12px;
-     border-radius: 8px;
-     transition: background 0.2s, color 0.2s;
-   }
-   
-   .sidebar-menu a:hover,
-   .sidebar-menu a.active {
-     background-color: #2a2a2a;
-     color: #ffffff;
-   }
-   
-   .sidebar .btn-voltar {
-     width: 100%;
-     background-color: #2a2a2a;
-     color: #ffffff;
-     border: 1px solid #3d3d3d;
-     padding: 10px;
-     border-radius: 6px;
-     cursor: pointer;
-     text-align: center;
-   }
-   
-   .sidebar .btn-voltar:hover {
-     background-color: #3d3d3d;
-   }
-   
-   .chat-main {
-     flex: 1;
-     height: 100vh;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     background-color: #1e1e1e;
-   }
-   
-   .chat-header {
-     width: 100%;
-     padding: 20px 30px;
-     border-bottom: 1px solid #2d2d2d;
-     text-align: left;
-     margin: 0;
-   }
-   
-   .chat-header h1 {
-     font-size: 1.8rem;
-     color: #ffffff;
-     margin-bottom: 4px;
-   }
-   
-   .chat-header p {
-     color: #888888;
-     font-size: 0.95rem;
-   }
-   
-   .chat-content {
-     flex: 1;
-     padding: 20px 30px;
-     overflow-y: auto;
-   }
-   
-   .chat-footer {
-     width: 100%;
-     padding: 20px 30px;
-     background-color: #1e1e1e;
-     display: flex;
-     justify-content: center;
-   }
-   
-   .chat-footer .input-group {
-     display: flex;
-     align-items: center;
-     width: 100%;
-     max-width: 800px;
-     background-color: #2a2a2a;
-     border-radius: 30px;
-     padding: 6px 15px;
-     border: 1px solid #3d3d3d;
-   }
-   
-   .chat-footer input[type="text"] {
-     flex: 1;
-     background: transparent;
-     border: none;
-     outline: none;
-     color: #ffffff;
-     padding: 10px;
-     font-size: 1rem;
-   }
-   
-   .chat-footer input[type="text"]::placeholder {
-     color: #777777;
-   }
-   
-   .chat-footer .btn-enviar {
-     background-color: #ffffff;
-     color: #000000;
-     border: none;
-     width: 36px;
-     height: 36px;
-     border-radius: 50%;
-     cursor: pointer;
-     font-size: 1rem;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-   }
-   
    
    /* ==========================================
-      9. ANIMAÇÃO DE ENTRADA DO HERO - VIDAFLOW
+      9. ANIMAÇÃO DE ENTRADA 
       ========================================== */
    
    /* Logo dentro do Hero (Cor Branca Aplicada) */
@@ -579,187 +426,337 @@
    }
    
    
-   /* ==========================================
+  /* ==========================================
       KEYFRAMES
       ========================================== */
    
-   @keyframes heroLogoEntrada {
-     0% {
-       opacity: 0;
-       transform: translateY(-25px) scale(0.82);
-       filter: brightness(0) invert(1) blur(6px);
-     }
-   
-     100% {
-       opacity: 1;
-       transform: translateY(0) scale(1);
-       filter: brightness(0) invert(1) blur(0);
-     }
+      @keyframes heroLogoEntrada {
+        0% {
+          opacity: 0;
+          transform: translateY(-25px) scale(0.82);
+          filter: brightness(0) invert(1) blur(6px);
+        }
+      
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          filter: brightness(0) invert(1) blur(0);
+        }
+      }
+      
+      @keyframes heroTituloEntrada {
+        0% {
+          opacity: 0;
+          transform: translateY(65px);
+          filter: blur(8px);
+        }
+      
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+          filter: blur(0);
+        }
+      }
+      
+      @keyframes heroTextoEntrada {
+        0% {
+          opacity: 0;
+          transform: translateY(25px);
+          filter: blur(4px);
+        }
+      
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+          filter: blur(0);
+        }
+      }
+      
+      @keyframes heroBotaoEntrada {
+        0% {
+          opacity: 0;
+          transform: translateY(25px) scale(0.96);
+        }
+      
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      
+      
+      /* Mantém as ondas originais do fundo */
+      .gradient-bg {
+        animation: girarOnda 12s linear infinite;
+      }
+      
+      .hero-full::after {
+        animation: girarOnda 18s linear infinite reverse;
+      }
+      
+      
+      /* Acessibilidade */
+      @media (prefers-reduced-motion: reduce) {
+        .hero-logo,
+        .hero-content h1,
+        .hero-content p,
+        .hero-content .btn-hero {
+          animation: none;
+          opacity: 1;
+          transform: none;
+          filter: brightness(0) invert(1);
+        }
+      }
+   /* Ajustes para transformar o card em link clicável */
+   .card-link {
+     text-decoration: none;
+     color: inherit;
+     cursor: pointer;
    }
    
-   @keyframes heroTituloEntrada {
-     0% {
-       opacity: 0;
-       transform: translateY(65px);
-       filter: blur(8px);
-     }
+   .saiba-mais {
+     display: inline-block;
+     margin-top: 15px;
+     color: #2563eb;
+     font-weight: 700;
+     font-size: 0.9rem;
+   }
    
-     100% {
+   /* Estilos para a página de detalhes */
+   .detalhes-hospital {
+     background: #ffffff;
+     padding: 30px;
+     border-radius: 12px;
+     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+     display: flex;
+     flex-direction: column;
+     gap: 24px;
+   }
+   
+   .info-bloco h2 {
+     color: #0f4c81;
+     font-size: 1.3rem;
+     margin-bottom: 8px;
+   }
+   
+   .info-bloco p, .info-bloco li {
+     color: #334155;
+     line-height: 1.6;
+   }
+   
+   .info-bloco ul {
+     padding-left: 20px;
+   }
+   /* Efeito de entrada suave dos cards */
+   @keyframes fadeInUp {
+     from {
+       opacity: 0;
+       transform: translateY(20px);
+     }
+     to {
        opacity: 1;
        transform: translateY(0);
-       filter: blur(0);
      }
    }
    
-   @keyframes heroTextoEntrada {
-     0% {
-       opacity: 0;
-       transform: translateY(25px);
-       filter: blur(4px);
-     }
-   
-     100% {
-       opacity: 1;
-       transform: translateY(0);
-       filter: blur(0);
-     }
+   .card-hospital {
+     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                 box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+     animation: fadeInUp 0.5s ease-out forwards;
    }
    
-   @keyframes heroBotaoEntrada {
-     0% {
-       opacity: 0;
-       transform: translateY(25px) scale(0.96);
-     }
-   
-     100% {
-       opacity: 1;
-       transform: translateY(0) scale(1);
-     }
+   /* Efeito Hover nos Cards (Elevação e Brilho) */
+   .card-hospital:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 12px 24px rgba(37, 99, 235, 0.15);
    }
    
-   
-   /* Mantém as ondas originais do fundo */
-   .gradient-bg {
-     animation: girarOnda 12s linear infinite;
+   /* Animação do texto "Ver detalhes →" */
+   .saiba-mais {
+     transition: transform 0.2s ease, color 0.2s ease;
+     display: inline-block;
    }
    
-   .hero-full::after {
-     animation: girarOnda 18s linear infinite reverse;
+   .card-hospital:hover .saiba-mais {
+     transform: translateX(6px);
+     color: #1d4ed8;
    }
    
-   
-   /* Acessibilidade */
-   @media (prefers-reduced-motion: reduce) {
-     .hero-logo,
-     .hero-content h1,
-     .hero-content p,
-     .hero-content .btn-hero {
-       animation: none;
-       opacity: 1;
-       transform: none;
-       filter: brightness(0) invert(1);
-     }
+   /* Animação suave no botão Voltar */
+   .btn-voltar {
+     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
    }
-/* Ajustes para transformar o card em link clicável */
-.card-link {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
+   
+   .btn-voltar:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+   }
 
-.saiba-mais {
-  display: inline-block;
-  margin-top: 15px;
-  color: #2563eb;
-  font-weight: 700;
-  font-size: 0.9rem;
-}
+    /* ==========================================
+         botão doe
+         ========================================== */
+   
+         .btn-doe {
+          display: inline-block;
+          padding: 12px 25px;
+          background-color: #1e3a8a;
+          color: white;
+          text-decoration:none;
+          border-radius: 10px;
+          font-weight: 1000;
+          cursor: pointer;
+      }
+      
+      .btn-doe:hover {
+          background-color: #1e3a8a;
+      }
 
-/* Estilos para a página de detalhes */
-.detalhes-hospital {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.info-bloco h2 {
-  color: #0f4c81;
-  font-size: 1.3rem;
-  margin-bottom: 8px;
-}
-
-.info-bloco p, .info-bloco li {
-  color: #334155;
-  line-height: 1.6;
-}
-
-.info-bloco ul {
-  padding-left: 20px;
-}
-/* Efeito de entrada suave dos cards */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.card-hospital {
-  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
-              box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  animation: fadeInUp 0.5s ease-out forwards;
-}
-
-/* Efeito Hover nos Cards (Elevação e Brilho) */
-.card-hospital:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.15);
-}
-
-/* Animação do texto "Ver detalhes →" */
-.saiba-mais {
-  transition: transform 0.2s ease, color 0.2s ease;
-  display: inline-block;
-}
-
-.card-hospital:hover .saiba-mais {
-  transform: translateX(6px);
-  color: #1d4ed8;
-}
-
-/* Animação suave no botão Voltar */
-.btn-voltar {
-  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-voltar:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
-}
-
-   /* ==========================================
-      botão doe
+         /* ==========================================
+      CHATBOT 
       ========================================== */
-
-      .btn-doe {
-        display: inline-block;
-        padding: 12px 25px;
-        background-color: #1e3a8a;
-        color: white;
-        text-decoration:none;
-        border-radius: 10px;
-        font-weight: 1000;
+      body.chat-layout {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: #1e1e1e;
+        color: #ffffff;
+        overflow: hidden;
+      }
+      
+      .sidebar {
+        width: 270px;
+        min-width: 260px;
+        height: 100vh;
+        background-color: #121212;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        border-right: 1px solid #2d2d2d;
+      }
+      
+      .sidebar-header h2 {
+        font-size: 1.4rem;
+        color: #ffffff;
+      }
+      
+      .sidebar-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .sidebar-menu a {
+        color: #a0a0a0;
+        text-decoration: none;
+        padding: 10px 12px;
+        border-radius: 8px;
+        transition: background 0.2s, color 0.2s;
+      }
+      
+      .sidebar-menu a:hover,
+      .sidebar-menu a.active {
+        background-color: #2a2a2a;
+        color: #ffffff;
+      }
+      
+      .sidebar .btn-voltar {
+        width: 100%;
+        background-color: #2a2a2a;
+        color: #ffffff;
+        border: 1px solid #3d3d3d;
+        padding: 10px;
+        border-radius: 6px;
         cursor: pointer;
-    }
-    
-    .btn-doe:hover {
-        background-color: #1e3a8a;
-    }
+        text-align: center;
+      }
+      
+      .sidebar .btn-voltar:hover {
+        background-color: #3d3d3d;
+      }
+      
+      .chat-main {
+        flex: 1;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #1e1e1e;
+      }
+      
+      .chat-header {
+        width: 100%;
+        padding: 20px 30px;
+        border-bottom: 1px solid #2d2d2d;
+        text-align: left;
+        margin: 0;
+      }
+      
+      .chat-header h1 {
+        font-size: 1.8rem;
+        color: #ffffff;
+        margin-bottom: 4px;
+      }
+      
+      .chat-header p {
+        color: #888888;
+        font-size: 0.95rem;
+      }
+      
+      .chat-content {
+        flex: 1;
+        padding: 20px 30px;
+        overflow-y: auto;
+      }
+      
+      .chat-footer {
+        width: 100%;
+        padding: 20px 30px;
+        background-color: #1e1e1e;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .chat-footer .input-group {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        background-color: #2a2a2a;
+        border-radius: 30px;
+        padding: 6px 15px;
+        border: 1px solid #3d3d3d;
+      }
+      
+      .chat-footer input[type="text"] {
+        flex: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #ffffff;
+        padding: 10px;
+        font-size: 1rem;
+      }
+      
+      .chat-footer input[type="text"]::placeholder {
+        color: #777777;
+      }
+      
+      .chat-footer .btn-enviar {
+        background-color: #ffffff;
+        color: #000000;
+        border: none;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
